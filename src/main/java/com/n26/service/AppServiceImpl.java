@@ -34,7 +34,7 @@ import java.util.stream.Collectors;
 public class AppServiceImpl implements AppService {
 
     public static final List<Transaction> TRANSACTIONS = new ArrayList<Transaction>();
-    private final Object lock = new Object();
+    private volatile Object lock = new Object();
 
     /**
      * method to insert transaction
